@@ -11,6 +11,11 @@
     "theme": "concurrently --kill-others 'hexo generate -w --color' 'gulp --color'",
     "write": "concurrently --kill-others --raw 'hexo generate -w --color' 'gulp static --color'"
   },
+  "bin": {
+    "theme": "bin/theme.js",
+    "write": "bin/write.js",
+    "deploy": "bin/deploy.js"
+  },
   "dependencies": {
     "hexo": "^3.2.0",
     "hexo-deployer-git": "^0.2.0",
@@ -24,13 +29,25 @@
     "hexo-server": "^0.2.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babelify": "^7.3.0",
     "browser-sync": "^2.12.5",
+    "browserify": "^13.1.0",
     "concurrently": "^2.2.0",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-postcss": "^6.2.0",
     "gulp-sass": "^2.3.1",
+    "gulp-size": "^2.1.0",
     "gulp-sourcemaps": "^2.0.0-alpha",
-    "postcss": "^5.1.2"
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^2.0.0",
+    "shelljs": "^0.7.4",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
