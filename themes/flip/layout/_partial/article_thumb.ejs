@@ -15,7 +15,7 @@
 <a href="<%- url_for(post.path) %>" class="fl-article-thumb fl-media-grid__item <%= (type && type === 'large') ? 'fl-media-grid__item--large' : '' %> <%= (type && type === 'small') ? 'fl-media-grid__item--small fl-article-thumb--alternative' : '' %>" data-issue-number="<%= issueNumber %>">
 	<div class="fl-media <%= (cat && cat === 'interview') ? 'fl-media--portrait' : 'fl-media--landscape' %>">
 		<% if (post.featured_image) { %>
-			<div class="fl-media__layer" data-lazy-src="<%= config.root %>/images/<%= post.featured_image %>" style="background-image: url(<%= config.root %>/images/<%= post.featured_image %>)"></div>
+			<div class="fl-media__layer" data-lazy-bg="<%= config.root %>images/<%= post.featured_image %>"></div>
 		<% } %>
 		<% if (post.tags.findOne({name: 'article'})) { %>
 			<div class="fl-media__layer fl-media__layer--overlay">

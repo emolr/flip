@@ -19,7 +19,7 @@
 		@include breakpoint(large) {
 			display: flex;
 			position: fixed;
-			left: 0;
+			right: 0;
 			top: 0;
 			width: 50%;
 			height: 100%;
@@ -28,14 +28,17 @@
 		&__view {
 			width: 100%;
 			height: 100%;
-			background-color: #ccc;
+			background-color: #fafafa;
+			background-size: contain;
+			background-position: center center;
+			background-repeat: no-repeat;
 		}
 	}
 
 	&__right {
 		@include breakpoint(large) {
 			border-top: 1px solid;
-			@include grid-column-offset(6)
+			@include grid-column-offset(0)
 		}
 
 		&__inner {

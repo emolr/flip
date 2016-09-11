@@ -103,6 +103,7 @@
 				transform: translateY(100%);
 			}
 			&.headroom--bottom {
+				transition: all .2s ease-out;
 				transform: translateY(0);
 			}
 		}
