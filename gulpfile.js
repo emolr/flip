@@ -60,7 +60,8 @@ gulp.task('styles', function() {
 gulp.task('scripts', () => {
 	browserify({
 	entries: config.scripts.inFiles,
-	debug: true
+	debug: true,
+	paths: ['./node_modules','./themes/flip/source/_js']
 	})
 	.transform(babelify)
 	.bundle()
@@ -75,8 +76,6 @@ gulp.task('scripts', () => {
 	.pipe(concat('app.min.js'))
     .pipe(sourcemaps.write())
 	.pipe(gulp.dest('.tmp/scripts'))
-	//.pipe(streamify(uglify({preserveComments: 'some'})))
-	//.pipe(streamify(concat('app.min.js')))
 	.pipe(gulp.dest(config.scripts.outFiles))
 	.pipe(reload({stream: true}));
 });

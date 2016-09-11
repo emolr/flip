@@ -17,6 +17,7 @@
     "deploy": "bin/deploy.js"
   },
   "dependencies": {
+    "headroom.js": "^0.9.3",
     "hexo": "^3.2.0",
     "hexo-deployer-git": "^0.2.0",
     "hexo-generator-archive": "^0.1.4",
