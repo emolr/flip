@@ -15,6 +15,7 @@ var babelify = require('babelify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var streamify = require('gulp-streamify');
+var buffer = require('vinyl-buffer');
 
 var concat = require('gulp-concat');
 var size = require('gulp-size');
@@ -57,22 +58,27 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', () => {
-  browserify({
-    entries: config.scripts.inFiles,
-    debug: true
-  })
-  .transform(babelify)
-  .bundle()
-  .on('error', function (err) {
-      console.log(err.toString());
-      this.emit("end");
-  })
-  .pipe(source('app.js'))
-  .pipe(gulp.dest('.tmp/scripts'))
-  .pipe(streamify(uglify({preserveComments: 'some'})))
-  .pipe(streamify(concat('app.min.js')))
-  .pipe(gulp.dest(config.scripts.outFiles))
-  .pipe(reload({stream: true}));
+	browserify({
+	entries: config.scripts.inFiles,
+	debug: true
+	})
+	.transform(babelify)
+	.bundle()
+	.on('error', function (err) {
+		console.log(err.toString());
+		this.emit("end");
+	})
+	.pipe(source('app.js'))
+	.pipe(buffer())
+	.pipe(sourcemaps.init({loadMaps: true}))
+	.pipe(uglify())
+	.pipe(concat('app.min.js'))
+    .pipe(sourcemaps.write())
+	.pipe(gulp.dest('.tmp/scripts'))
+	//.pipe(streamify(uglify({preserveComments: 'some'})))
+	//.pipe(streamify(concat('app.min.js')))
+	.pipe(gulp.dest(config.scripts.outFiles))
+	.pipe(reload({stream: true}));
 });
 
 gulp.task('scripts2', function() {
