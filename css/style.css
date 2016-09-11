@@ -403,7 +403,8 @@ th {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  min-width: 160px; }
   .fl-link-to__teaser {
     color: #EB4973;
     font-size: 12px;
@@ -870,5 +871,22 @@ body {
     .fl-bar__additional {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
+
+.fl-bar--top {
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in; }
+  .fl-bar--top.headroom--unpinned {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+
+.fl-bar--bottom {
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in; }
+  .fl-bar--bottom.headroom--unpinned {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%); }
+  .fl-bar--bottom.headroom--bottom {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
 
 /*# sourceMappingURL=style.css.map */
