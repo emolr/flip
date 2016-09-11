@@ -1,0 +1,110 @@
+// Bar
+// Styling for both header and footer
+
+.fl-bar {
+	@include flex-grid-row($width: 100%);
+	@include flex-align($y: middle);
+	width: 100%;
+	height: 60px;
+	background-color: map-get($colors, '0');
+
+	&--top {
+		border-bottom: 1px solid map-get($colors, '200');
+	}
+
+	&--bottom {
+		border-top: 1px solid map-get($colors, '200');
+		height: auto;
+
+		@include breakpoint(medium) {
+			height: 60px;
+		}
+	}
+
+	&__menu-trigger {
+		@include flex-grid-column(shrink);
+		@include breakpoint(medium) {
+			display: none;
+		}
+	}
+
+	&__logo {
+		@include flex-grid-column(shrink);
+		max-height: 29px;
+		& + * {
+			margin-left: auto;
+		}
+
+		@include breakpoint(medium) {
+			max-height: 32px;
+		}
+	}
+
+	&__nav {
+		@include flex-grid-column(shrink);
+		@include flex-align($x: right);
+
+		&--for-large {
+			@include breakpoint(small only) {
+				display: none;
+			}
+		}
+
+		&--for-small {
+			@include breakpoint(medium) {
+				display: none;
+			}
+		}
+	}
+
+	&__footer {
+		@include flex-grid-column(12);
+		order: 2;
+
+		& + * {
+			margin-left: auto;
+		}
+
+		@include breakpoint(medium) {
+			@include flex-grid-column(shrink);
+			order: 1;
+		}
+	}
+
+	&__additional {
+		@include flex-grid-column(12);
+		order: 1;
+		height: 60px;
+		border-bottom: 1px solid map-get($colors, '200');
+
+		@include breakpoint(medium) {
+			@include flex-grid-column(shrink);
+			order: 2;
+			height: 100%;
+			border-bottom: none;
+		}
+	}
+}
+
+
+// Sticky functionality
+
+@include breakpoint(large) {
+	.fl-bar {
+		&--top {
+			transition: all .3s ease-in;
+			&.headroom--unpinned {
+				transform: translateY(-100%);
+			}
+		}
+		&--bottom {
+			transition: all .3s ease-in;
+			&.headroom--unpinned {
+				transform: translateY(100%);
+			}
+			&.headroom--bottom {
+				transform: translateY(0);
+			}
+		}
+	}
+}

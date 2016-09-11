@@ -1,0 +1,19 @@
+<div class="fl-p-top--60 fl-p-bottom--20">
+	<div class="fl-media-grid">
+		<% site.tags.findOne({name: 'article'}).posts.sort('date', 'desc').limit(5).each(function(post, i) { %>
+			<% if (i <= 1) { %>
+				<%- partial('_partial/article_thumb', {post: post, index: i, type: 'large', cat: false }) %>
+			<% } else { %>
+				<%- partial('_partial/article_thumb', {post: post, index: i, type: 'medium', cat: false }) %>
+			<% } %>
+		<% }); %>
+
+		<div class="fl-media-grid__title">
+			interviews
+		</div>
+
+		<% site.tags.findOne({name: 'interview'}).posts.sort('date', 'desc').limit(4).each(function(post, i) { %>
+			<%- partial('_partial/article_thumb', {post: post, index: i, type: 'small', cat: 'interview'}) %>
+		<% }); %>
+	</div>
+</div>

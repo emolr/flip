@@ -1,0 +1,16 @@
+<nav class="fl-bar__nav fl-nav fl-bar__nav--for-large">
+	<% for (var i in theme.menu){ %>
+		<a
+			href="<%- url_for(theme.menu[i]) %>"
+			class="fl-nav__item <%= nIsCurrent(theme.menu[i]) ? 'fl-nav__item--is-active' : '' %>">
+				<%= i %>
+			</a>
+	<% } %>
+	<% for (var i in theme.secondary_menu){ %>
+		<a
+			href="<%- url_for(theme.menu[i]) %>"
+			class="fl-nav__item fl-nav__item--dim <%= nIsCurrent(theme.secondary_menu[i]) ? 'fl-nav__item--is-active' : '' %>">
+				<%= i %>
+			</a>
+	<% } %>
+</nav>

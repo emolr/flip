@@ -1,0 +1,20 @@
+<%
+	var articleType = false;
+	if (page.layout === 'post') {
+		articleType = 'post';
+	}
+%>
+<% if (post.prev || post.next) { %>
+	<% if (post.next){ %>
+		<a href="<%- url_for(post.next.path) %>" class="fl-link-to">
+			<div>
+				<div class="fl-link-to__teaser">
+					Next story
+				</div>
+				<div class="fl-link-to__title">
+					<%= (articleType === 'post') ? post.next.title : 'Copenhagen Open 2016' %>
+				</div>
+			</div>
+		</a>
+	<% } %>
+<% } %>

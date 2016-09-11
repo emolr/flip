@@ -1,0 +1,41 @@
+// Footer.scss
+
+.fl-footer {
+	display: flex;
+	font-family: map-get($font-families, 'he');
+	font-weight: map-get($font-weights, 'crisp');
+	font-size: map-get($font-sizes, 'xx-small');
+	color: map-get($colors, '500');
+	height: 60px;
+	align-items: center;
+
+	@include breakpoint(medium) {
+		height: 100%;
+	}
+
+	&__inner {
+		width: 100%;
+	}
+
+	&__nav {
+		float: right;
+		@include breakpoint(medium) {
+			float: none;
+		}
+
+		&__item-separator:first-of-type {
+			@include breakpoint(small only) {
+				display: none;
+			}
+		}
+	}
+
+	& a {
+		text-decoration: none;
+		color: inherit;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

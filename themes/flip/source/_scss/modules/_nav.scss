@@ -1,0 +1,36 @@
+// nav.scss
+
+.fl-nav {
+
+	& > .fl-nav__item {
+		display: block;
+		color: map-get($colors, '900');
+		font-weight: map-get($font-weights, 'medium');
+		font-family: map-get($font-families, 'he');
+		font-size: map-get($font-sizes, 'x-small');
+		text-decoration: none;
+
+		&--dim {
+			color: map-get($colors, '500');
+		}
+
+		&--is-active,
+		&:hover {
+			color: map-get($colors, 'brand');
+		}
+
+		@include breakpoint(medium) {
+			display: inline-block;
+			padding-top: 21px;
+			padding-bottom: 22px;
+
+			// Spacing
+			&:not(:first-of-type) {
+				padding-left: map-get($spacings, '15');
+			}
+			&:not(:last-of-type) {
+				padding-right: map-get($spacings, '15');
+			}
+		}
+	}
+}

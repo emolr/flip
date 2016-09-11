@@ -1,0 +1,52 @@
+.fl-article-layout {
+	@include flex-grid-row($width: 100%);
+	min-height: 100%;
+	width: 100%;
+
+	&__right, &__left {
+		@include flex-grid-column(12)
+		@include breakpoint(large) {
+			@include flex-grid-column(6)
+		}
+	}
+
+	&__left {
+		display: none;
+		padding: map-get($spacings, '20');
+		min-height: 100%;
+		pointer-events: none;
+
+		@include breakpoint(large) {
+			display: flex;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 50%;
+			height: 100%;
+		}
+
+		&__view {
+			width: 100%;
+			height: 100%;
+			background-color: #ccc;
+		}
+	}
+
+	&__right {
+		@include breakpoint(large) {
+			border-top: 1px solid;
+			@include grid-column-offset(6)
+		}
+
+		&__inner {
+			padding-top: map-get($spacings, '30');
+			padding-bottom: map-get($spacings, '30');
+
+			@include breakpoint(large) {
+				padding-top: 60px + map-get($spacings, '30');
+				padding-bottom: 60px + map-get($spacings, '30');
+			}
+		}
+	}
+
+}

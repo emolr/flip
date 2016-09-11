@@ -1,0 +1,10 @@
+// Article-thumb.scss
+
+.fl-article-thumb {
+	color: map-get($colors, '0');
+	text-decoration: none;
+
+	&--alternative {
+		color: map-get($colors, '900');
+	}
+}

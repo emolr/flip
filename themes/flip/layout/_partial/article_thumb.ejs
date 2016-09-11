@@ -1,0 +1,46 @@
+<%
+	var issueNumber = null;
+
+	site.tags.findOne({name: 'article'}).posts.sort('date', 'asc').each(function(tagPost, i) {
+		if (tagPost.title === post.title) {
+		 	if (i+1 < 10) {
+		 		issueNumber = '0'+(i+1)
+		 	} else {
+		 		issueNumber = i+1
+		 	}
+		}
+	});
+%>
+
+<a href="<%- url_for(post.path) %>" class="fl-article-thumb fl-media-grid__item <%= (type && type === 'large') ? 'fl-media-grid__item--large' : '' %> <%= (type && type === 'small') ? 'fl-media-grid__item--small fl-article-thumb--alternative' : '' %>" data-issue-number="<%= issueNumber %>">
+	<div class="fl-media <%= (cat && cat === 'interview') ? 'fl-media--portrait' : 'fl-media--landscape' %>">
+		<% if (post.featured_image) { %>
+			<div class="fl-media__layer" data-lazy-src="<%= config.root %>/images/<%= post.featured_image %>" style="background-image: url(<%= config.root %>/images/<%= post.featured_image %>)"></div>
+		<% } %>
+		<% if (post.tags.findOne({name: 'article'})) { %>
+			<div class="fl-media__layer fl-media__layer--overlay">
+			</div>
+		<% } %>
+
+		<% if (type && type != 'small') { %>
+			<div class="fl-post-title">
+				<h2 class="fl-post-title__title <%= (type && type === 'large') ? 'fl-post-title__title--large' : '' %>">
+					<%= post.title %>
+				</h2>
+				<% if (type && type === 'large') { %>
+					<div class="fl-post-title__divider"></div>
+					<p class="fl-post-title__teaser <%= (type && type === 'large') ? 'fl-post-title__teaser--large' : '' %>">
+						Read article
+					</p>
+				<% } %>
+			</div>
+		<% } %>
+	</div>
+	<% if (type && type === 'small') { %>
+		<div class="fl-post-title fl-post-title--underneath">
+			<h2 class="fl-post-title__title">
+				<%= post.title %>
+			</h2>
+		</div>
+	<% } %>
+</a>

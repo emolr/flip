@@ -1,0 +1,11 @@
+<footer class="fl-footer">
+	<div class="fl-footer__inner">
+		© Hi media
+		<span class="fl-footer__nav">
+		<% for (var i in theme.footermenu){ %>
+			<span class="fl-footer__nav__item-separator">·</span>
+			<a href="<%- url_for(theme.footermenu[i]) %>" class="fl-footer__nav__item"><%= i %></a>
+		<% } %>
+		</span>
+	</div>
+</footer>

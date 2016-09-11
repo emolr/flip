@@ -1,0 +1,59 @@
+// post-title.scss
+
+.fl-post-title {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: inherit;
+
+	text-align: center;
+	font-family: map-get($font-families, 'he');
+
+	&__title {
+
+		margin: 0 0 map-get($spacings, '5');
+		font-size: map-get($font-sizes, 'large');
+		font-weight: map-get($font-weights, 'normal');
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: block;
+		max-width: 100%;
+		text-decoration: none;
+
+		&--large {
+			font-size: map-get($font-sizes, 'xx-large');
+		}
+	}
+
+	&__divider {
+		width: 100%;
+		margin: 0 auto;
+		height: 2px;
+		background-color: currentColor;
+
+		& + .fl-post-title__teaser {
+			margin: map-get($spacings, '5') 0 0;
+		}
+	}
+
+	&__teaser {
+		font-size: map-get($font-sizes, 'small');
+		font-weight: map-get($font-weights, 'normal');
+		margin: 0;
+
+		&--large {
+			font-size: map-get($font-sizes, 'large');
+		}
+	}
+
+	&--underneath {
+		position: relative;
+		transform: none;
+		top: 0;
+		left: 0;
+		padding: map-get($spacings, '10');
+	}
+}

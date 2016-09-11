@@ -1,0 +1,60 @@
+// Variables
+
+// Colors
+$colors: (
+	'brand': #EB4973,
+	'0': #fff,
+	'50': #FAFAFA,
+	'100': #F5F5F5,
+	'200': #EEE,
+	'300': #E0E0E0,
+	'400': #BDBDBD,
+	'500': #9E9E9E,
+	'600': #757575,
+	'700': #616161,
+	'800': #424242,
+	'900': #212121
+);
+
+$font-sizes: (
+	'xx-large': 26px,
+	'x-large': 24px,
+	'large': 18px,
+	'medium': 17px,
+	'small': 16px,
+	'x-small': 14px,
+	'xx-small': 12px
+);
+
+$font-weights: (
+	'bold': bold,
+	'medium': 500,
+	'normal': normal,
+	'crisp': 300
+);
+
+$he: "helvetica neue", helvetica, sans-serif;
+$so: "Sofia pro", "helvetica neue", helvetica, sans-serif;
+$ge: georgia, serif;
+
+$font-families: (
+	'he': $he,
+	'so': $so,
+	'ge': $ge
+);
+
+$spacings: (
+	'5': 5px,
+	'10': 10px,
+	'15': 15px,
+	'20': 20px,
+	'30': 30px,
+	'60': 60px,
+	'80': 80px,
+	'100': 100px
+);
+
+$image-ratios: (
+	'portrait': 130%,
+	'landscape': 60%
+);

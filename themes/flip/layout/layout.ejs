@@ -1,0 +1,15 @@
+<%- partial('_partial/head') %>
+<body class="fl-layout--<%= page.layout %>">
+  <%- partial('_partial/header') %>
+  <div class="fl-body">
+    <%- body %>
+  </div>
+  <% if (page.layout === 'post') { %>
+  	<%- partial('_partial/article-footer', {post: page}) %>
+  <% } else { %>
+  	<%- partial('_partial/page-footer') %>
+  <% } %>
+
+  <%- partial('_partial/scripts') %>
+</body>
+</html>

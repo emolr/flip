@@ -1,0 +1,58 @@
+// media-grid.scss
+$media-grid-column-gutter: (
+  small: 20px,
+  medium: 30px
+);
+
+.fl-media-grid {
+	@include flex-grid-row($gutter: $media-grid-column-gutter);
+
+	&__item {
+		@include flex-grid-column(12, $gutter: $media-grid-column-gutter);
+		margin-bottom: map-get($spacings, '30');
+
+		@include breakpoint(medium) {
+			@include flex-grid-column(6, $gutter: $media-grid-column-gutter);
+		}
+
+		@include breakpoint(large) {
+			@include flex-grid-column(4, $gutter: $media-grid-column-gutter);
+			margin-bottom: map-get($spacings, '60');
+		}
+
+		&--large {
+
+			@include flex-grid-column(12, $gutter: $media-grid-column-gutter);
+
+			@include breakpoint(medium) {
+				@include flex-grid-column(6, $gutter: $media-grid-column-gutter);
+			}
+		}
+
+		&--small {
+			@include flex-grid-column(6, $gutter: $media-grid-column-gutter);
+
+			@include breakpoint(medium) {
+				@include flex-grid-column(3, $gutter: $media-grid-column-gutter);
+			}
+
+			@include breakpoint(large) {
+				@include flex-grid-column(3, $gutter: $media-grid-column-gutter);
+			}
+		}
+	}
+
+	&__title {
+		@include flex-grid-column(12, $gutter: $media-grid-column-gutter);
+		text-transform: capitalize;
+		font-weight: map-get($font-weights, 'medium');
+		font-family: map-get($font-families, 'he');
+		font-size: map-get($font-sizes, 'small');
+		color: map-get($colors, '700');
+		margin-bottom: map-get($spacings, '30');
+
+		@include breakpoint(large) {
+			margin-bottom: map-get($spacings, '60');
+		}
+	}
+}
