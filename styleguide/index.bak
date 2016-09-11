@@ -1,0 +1,106 @@
+---
+title: styleguide
+date: 2016-09-08 14:16:52
+---
+# Styleguide
+This is the manuel styleguide for Flip, always remember to update this page if any changes are made.
+Original created by: Emil rune Møller (github: emolr).
+
+
+## Typography
+
+Typography style is not based on markup as a general rule, styling fx. articles, extend styling into article style.
+
+Styles for typography is split up into size, weight and family.
+
+<h2 class="fl-text-large">Size</h2>
+
+<div class="fl-text-xx-large">fl-text-xx-large</div>
+<div class="fl-text-x-large">fl-text-x-large</div>
+<div class="fl-text-large">fl-text-large</div>
+<div class="fl-text-medium">fl-text-medium</div>
+<div class="fl-text-small">fl-text-small</div>
+<div class="fl-text-x-small">fl-text-x-small</div>
+<div class="fl-text-xx-small">fl-text-xx-small</div>
+
+{% codeblock %}
+	<div class="fl-text-xx-large">fl-text-xx-large</div>
+	<div class="fl-text-x-large">fl-text-x-large</div>
+	<div class="fl-text-large">fl-text-large</div>
+	<div class="fl-text-medium">fl-text-medium</div>
+	<div class="fl-text-small">fl-text-small</div>
+	<div class="fl-text-x-small">fl-text-x-small</div>
+	<div class="fl-text-xx-small">fl-text-xx-small</div>
+{% endcodeblock %}
+
+<h2 class="fl-text-large">Weight</h2>
+
+<div class="fl-text-bold">Helvetica neue...</div>
+<div class="fl-text-medium">Sofia pro...</div>
+<div class="fl-text-regular">Georgia...</div>
+
+{% codeblock %}
+	<div class="fl-text-he">Helvetica neue...</div>
+	<div class="fl-text-so">Sofia pro...</div>
+	<div class="fl-text-ge">Georgia...</div>
+{% endcodeblock %}
+
+<h2 class="fl-text-large">Font family</h2>
+
+<div class="fl-text-he">Helvetica neue...</div>
+<div class="fl-text-so">Sofia pro...</div>
+<div class="fl-text-ge">Georgia...</div>
+
+{% codeblock %}
+	<div class="fl-text-he">Helvetica neue...</div>
+	<div class="fl-text-so">Sofia pro...</div>
+	<div class="fl-text-ge">Georgia...</div>
+{% endcodeblock %}
+
+<h2 class="fl-text-large">Colors</h2>
+
+The colors can be used withing style by using sass function `color({colorName})`.
+
+{% sg_color brand fl-color-brand %}
+{% sg_color 0 fl-color-0 %}
+{% sg_color 50 fl-color-50 %}
+{% sg_color 100 fl-color-100 %}
+{% sg_color 200 fl-color-200 %}
+{% sg_color 300 fl-color-300 %}
+{% sg_color 400 fl-color-400 %}
+{% sg_color 500 fl-color-500 %}
+{% sg_color 600 fl-color-600 %}
+{% sg_color 700 fl-color-700 %}
+{% sg_color 800 fl-color-800 %}
+{% sg_color 900 fl-color-900 %}
+
+<h2 class="fl-text-large">Text colors</h2>
+
+<div class="fl-text-color--brand">fl-text-color--brand</div>
+<div class="fl-text-color--0">fl-text-color--0</div>
+<div class="fl-text-color--50">fl-text-color--50</div>
+<div class="fl-text-color--100">fl-text-color--100</div>
+... and so on for all colors
+
+{% codeblock %}
+	<div class="fl-text-color--brand">fl-text-color--brand</div>
+	<div class="fl-text-color--0">fl-text-color--0</div>
+	<div class="fl-text-color--50">fl-text-color--50</div>
+	<div class="fl-text-color--100">fl-text-color--100</div>
+	... and so on for all colors
+{% endcodeblock %}
+
+<h2 class="fl-text-large">Background colors</h2>
+
+<div style="text-align: center; padding: 30px 10px;" class="fl-bg-color--brand">fl-bg-color--brand</div>
+<div style="text-align: center; padding: 30px 10px;" class="fl-bg-color--0">fl-bg-color--0</div>
+<div style="text-align: center; padding: 30px 10px;" class="fl-bg-color--50">fl-bg-color--50</div>
+<div style="text-align: center; padding: 30px 10px;" class="fl-bg-color--100">fl-bg-color--100</div>
+... and so on for all colors
+{% codeblock %}
+	<div class="fl-bg-color--brand">fl-bg-color--brand</div>
+	<div class="fl-bg-color--0">fl-bg-color--0</div>
+	<div class="fl-bg-color--50">fl-bg-color--50</div>
+	<div class="fl-bg-color--100">fl-bg-color--100</div>
+	... and so on for all colors
+{% endcodeblock %}
