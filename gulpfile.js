@@ -19,8 +19,7 @@ gulp.task('styles', function() {
 			.pipe(sourcemaps.init())
 			.pipe(scss({
 				includePaths: [
-					// './themes/nodes/node_modules/foundation-sites/scss',
-					// './themes/nodes/node_modules/utility-opentype/css'
+					'node_modules/foundation-sites/scss'
 				]
 			}).on('error', scss.logError))
 			.pipe(sourcemaps.write())
