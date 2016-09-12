@@ -712,6 +712,11 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto; }
+  .fl-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 26px; }
   .fl-content__intro {
     color: #212121;
     font-size: 18px;

@@ -14,9 +14,12 @@ export default class ArticleController {
 		console.log(items);
 		items
 		.on('enter', (el, i) => {
-			console.log(el, 'i', i)
 			const src = el.getAttribute('data-src');
-			this.setViewBg(src, view)
+			if (window.innerWidth > 768) {
+				this.setViewBg(src, view);
+			} else {
+				el.src = src;
+			}
 		});
 	}
 
