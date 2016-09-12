@@ -20,6 +20,6 @@ export default class AppController {
 
 	replaceBg(target) {
 		var data = target.getAttribute('data-lazy-bg');
-		target.style.backgroundImage = `url(${data}`;
+		target.style.backgroundImage = "url(" + data + ")";
 	}
 }
