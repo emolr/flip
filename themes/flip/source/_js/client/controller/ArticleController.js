@@ -3,19 +3,24 @@ import inView from 'in-view';
 
 export default class ArticleController {
 	constructor() {
+		this.startPosY = 0;
+		this.latestViewChange = 0;
+
 		this.instanciateStickyBars();
 		this.scrollSlider();
 	}
 
 	scrollSlider() {
 		const articleImages = document.querySelectorAll('.fl-content__img');
-		const view = document.querySelector('.fl-article-layout__left__view');
+		const view = document.querySelector('.fl-view__inner');
 		const items = new inView('.fl-content__img');
-		console.log(items);
 		items
 		.on('enter', (el, i) => {
 			const src = el.getAttribute('data-src');
 			if (window.innerWidth > 768) {
+				if (el != items.elements[0]) {
+					this.initParallax();
+				}
 				this.setViewBg(src, view);
 			} else {
 				el.src = src;
@@ -40,5 +45,18 @@ export default class ArticleController {
 		let stickyFooter = new Headroom(footer, headroomOptions);
 		stickyHeader.init();
 		stickyFooter.init();
+	}
+
+	initParallax() {
+		this.startPosY = window.scrollY;
+		window.addEventListener('scroll', this.parallaxView);
+	}
+
+	destroyParallax() {
+		window.removeEventListener('scroll', this.parallaxView());
+	}
+
+	parallaxView() {
+		// console.log(window.scrollY);
 	}
 }

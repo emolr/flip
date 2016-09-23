@@ -32,3 +32,19 @@ One of the biggest risks associated with a geographically scattered team is the 
 {% fl_image http://skateboarding.transworld.net/wp-content/blogs.dir/440/files/2016/08/Josh-Wilson-SmithSIGHTIGS.jpg '"alt text"' %}
 
 One of the biggest risks associated with a geographically scattered team is the possibility that employees can feel disconnected from their colleagues, management, and the larger goals of the company. According to Inc.’s Jeff Haden, when coworkers coexist, they gain an incredible amount of information. A culture of total transparency can provide a rich context that substitutes for co working in
+
+## Hub at first sight
+
+One of the biggest risks associated with a geographically scattered team is the possibility that employees can feel disconnected from their colleagues, management, and the larger goals of the company. According to Inc.’s Jeff Haden, when coworkers coexist, they gain an incredible amount of information. A culture of total transparency can provide a rich context that substitutes for co working in
+
+One of the biggest risks associated with a geographically scattered team is the possibility that employees can feel disconnected from their colleagues, management, and the larger goals of the company. According to Inc.’s Jeff Haden, when coworkers coexist, they gain an incredible amount of information. A culture of total transparency can provide a rich context that substitutes for co working in
+
+One of the biggest risks associated with a geographically scattered team is the possibility that employees can feel disconnected from their colleagues, management, and the larger goals of the company. According to Inc.’s Jeff Haden, when coworkers coexist, they gain an incredible amount of information. A culture of total transparency can provide a rich context that substitutes for co working in
+
+## Hub at first sight
+
+One of the biggest risks associated with a geographically scattered team is the possibility that employees can feel disconnected from their colleagues, management, and the larger goals of the company. According to Inc.’s Jeff Haden, when coworkers coexist, they gain an incredible amount of information. A culture of total transparency can provide a rich context that substitutes for co working in
+
+One of the biggest risks associated with a geographically scattered team is the possibility that employees can feel disconnected from their colleagues, management, and the larger goals of the company. According to Inc.’s Jeff Haden, when coworkers coexist, they gain an incredible amount of information. A culture of total transparency can provide a rich context that substitutes for co working in
+
+One of the biggest risks associated with a geographically scattered team is the possibility that employees can feel disconnected from their colleagues, management, and the larger goals of the company. According to Inc.’s Jeff Haden, when coworkers coexist, they gain an incredible amount of information. A culture of total transparency can provide a rich context that substitutes for co working in
