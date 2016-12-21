@@ -1,2 +1,2 @@
 # flip
-a online magazine built with http://hexo.io
+A magazine theme built with hexo.io
